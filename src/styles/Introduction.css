@@ -1,0 +1,300 @@
+.intro-container {
+  padding-top: 0; /* Navbar is transparent/fixed overlay usually, reset padding */
+  min-height: 100vh;
+  background-color: #141414;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+/* Hero Section */
+/* Hero Section */
+.intro-hero {
+  position: relative;
+  padding: 15vh 4% 100px; /* Increased top padding for full screen feel */
+  margin-bottom: 30px;
+  background-image: linear-gradient(to bottom, rgba(20,20,20,0.3) 0%, rgba(20,20,20,0.8) 60%, #141414 100%),
+                    linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%), 
+                    url('/netflix_hero_bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 85vh; /* Occupy most of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Netflix Original Badge */
+.netflix-original-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-family: 'Bebas Neue', 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #dbdbdb;
+  font-size: 0.9rem;
+}
+
+.n-logo {
+  color: #e50914;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.original-text {
+  letter-spacing: 4px;
+}
+
+.intro-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: -2px; /* Tighter for movie title feel */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  line-height: 0.9;
+}
+
+.intro-metadata {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #a3a3a3;
+  font-weight: 500;
+}
+
+.match-score {
+  color: #46d369; /* Netflix match green */
+  font-weight: bold;
+}
+
+.maturity-rating {
+  border: 1px solid #a3a3a3;
+  padding: 0 5px;
+  font-size: 0.9rem;
+}
+
+.genre-tag {
+  color: #fff;
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+.quality-badge {
+  border: 1px solid #a3a3a3;
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.intro-synopsis {
+  max-width: 600px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.intro-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* Reusing .btn styles but ensuring specificity */
+.btn-white {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.btn-white:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-gray {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.btn-gray:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Section Dividers */
+.section-divider {
+  border-top: 1px solid #404040;
+  margin: 30px 4%;
+  position: relative;
+}
+
+.section-label {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  background-color: #141414;
+  padding-right: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e5e5e5;
+}
+
+/* Episodes / Timeline */
+.episodes-list {
+  padding: 0 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.episode-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s;
+  cursor: default;
+}
+
+.episode-row:hover {
+  background-color: #1f1f1f;
+}
+
+.episode-number {
+  font-size: 1.5rem;
+  color: #a3a3a3;
+  min-width: 30px;
+}
+
+.episode-thumbnail {
+  flex: 0 0 200px; /* Increased to 200px for better text fit, fixed width */
+  width: 200px;
+  height: 112px; /* 16:9 aspect ratio roughly */
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.episode-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.episode-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.episode-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.episode-date {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.episode-desc {
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 800px;
+}
+
+/* Skills Grid (Cast) */
+.skills-grid {
+  padding: 20px 4%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.skill-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.skill-circle:hover {
+  border-color: #e50914;
+}
+
+.skill-circle img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.skill-name {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2.5rem;
+  }
+  
+  .episode-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .episode-thumbnail {
+    width: 100%;
+    height: 150px;
+  }
+}

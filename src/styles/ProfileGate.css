@@ -1,0 +1,102 @@
+.profile-gate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.5s ease;
+}
+
+.gate-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gate-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.profiles-container {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 15vh;
+  height: 15vh;
+  min-width: 84px;
+  min-height: 84px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+  margin-bottom: 1rem;
+  transition: transform 0.2s, border 0.2s;
+  border: 3px solid transparent;
+}
+
+.profile-item:hover .profile-avatar {
+  border: 3px solid white;
+  transform: scale(1.1);
+}
+
+.profile-name {
+  color: #808080;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.profile-item:hover .profile-name {
+  color: white;
+}
+
+.manage-btn {
+  background: transparent;
+  border: 1px solid #808080;
+  color: #808080;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.manage-btn:hover {
+  border-color: white;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .gate-title {
+    font-size: 2rem;
+  }
+  .profiles-container {
+    gap: 20px;
+  }
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}

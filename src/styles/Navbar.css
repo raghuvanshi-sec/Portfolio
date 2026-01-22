@@ -1,0 +1,165 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  box-sizing: border-box; /* Critical for padding calculation */
+}
+
+.navbar.scrolled {
+  background-color: var(--bg-color); /* Netflix black */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  color: var(--primary-red);
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.btn-switch-profile {
+  background-color: transparent;
+  border: 1px solid var(--primary-red);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-switch-profile:hover {
+  background-color: var(--primary-red);
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: rgba(0,0,0,0.95);
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+.nav-icon-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  /* margin-right removed, controlled by container */
+}
+
+.nav-icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Search Bar Styles */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.search-box.active {
+  background: black;
+  border: 1px solid white;
+  border-radius: 4px; /* Optional: if you want rounded corners */
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.search-input {
+  width: 0;
+  opacity: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.search-box.active .search-input {
+  width: 200px;
+  opacity: 1;
+  padding-left: 10px;
+}
+
+.search-box.active .search-btn {
+  pointer-events: none; /* Let clicks pass through if needed, or keep active */
+}

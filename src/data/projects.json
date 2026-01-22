@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "PhishGuard",
+    "description": "PhishGuard is a machine learning–based phishing detection system that identifies malicious emails, messages, and URLs by analyzing suspicious language, deceptive links, and social engineering patterns.",
+    "category": "Cybersecurity Tools",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=2069&auto=format&fit=crop",
+    "techStack": ["Python", "Machine Learning", "AI Detection"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/PhishGuard",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 2,
+    "title": "PhishHunter",
+    "description": "HTML-based phishing detection or simulation tool designed to identify and track deceptive phishing attempts.",
+    "category": "Cybersecurity Tools",
+    "image": "https://images.unsplash.com/photo-1563206767-5b1d972e9fb9?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["HTML", "Security Analysis"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/phishhunter",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 3,
+    "title": "My-Git-Info",
+    "description": "A repository tool for extracting or displaying Git configuration information, useful for development environment setups.",
+    "category": "Dev Tools",
+    "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=2088&auto=format&fit=crop",
+    "techStack": ["Git", "Shell", "Config"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/My-Git-Info",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Raghuvanshi-Sec Profile",
+    "description": "The special README repository for the GitHub profile, showcasing professional bio, stats, and pinned projects.",
+    "category": "General",
+    "image": "https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?q=80&w=2058&auto=format&fit=crop",
+    "techStack": ["Markdown", "GitHub Actions"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/raghuvanshi-sec",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 5,
+    "title": "CyberQuest (Concept)",
+    "description": "Gamified cybersecurity learning platform concept featuring interactive quizzes, XP systems, and leaderboards.",
+    "category": "Web Apps",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Portfolio",
+    "description": "A cinematic, immersive personal portfolio website inspired by Netflix's UI. Features dynamic content filtering, pop-out animations, and a 'browse' experience for skills and projects.",
+    "category": "Web Apps",
+    "image": "/netflix_hero_bg.png",
+    "techStack": ["React", "Vite", "CSS3", "Generative AI"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/Portfolio",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Wonderlust",
+    "description": "Full-stack travel listing platform allowing users to discover and book unique stays.",
+    "category": "Web Apps",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/Wonderlust",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 8,
+    "title": "YouTube Music Clone",
+    "description": "A responsive music streaming interface replicating YouTube Music's core functionality.",
+    "category": "Web Apps",
+    "image": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
+    "techStack": ["React", "Vite", "YouTube Data API", "Tailwind"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/MusicClone",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Hex Inspector",
+    "description": "Advanced web-based binary file analyzer capable of handling large files with virtualization.",
+    "category": "Cybersecurity Tools",
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["React", "Virtualization", "Web Workers"],
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/HexInspector",
+      "demo": "#"
+    }
+  }
+]

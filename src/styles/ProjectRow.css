@@ -1,0 +1,36 @@
+.project-row {
+  margin-bottom: 3vw;
+  padding-left: 4%;
+}
+
+.row-title {
+  font-size: 1.4vw;
+  color: #e5e5e5;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.project-row:hover .row-title {
+  color: white;
+}
+
+.row-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 40px 4%; /* Increased padding to allow scale */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -4%; /* Pull left to align with viewport edge */
+  margin-right: -4%;  /* Negative margin right to match left */
+  width: auto;     /* Let it expand naturally with negative margins */
+  padding-right: 4%; /* Add padding to right side to prevent cut-off */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.row-slider {
+  display: flex;
+  gap: 15px; /* Increased gap */
+  padding-left: 10px;
+}

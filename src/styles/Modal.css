@@ -1,0 +1,137 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #181818;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  border-radius: 8px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  animation: scaleUp 0.3s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  z-index: 20;
+  border: 2px solid white;
+}
+
+.modal-close:hover {
+  background: white;
+  color: black;
+}
+
+.modal-image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.modal-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.modal-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(to top, #181818 0%, transparent 100%);
+}
+
+.modal-image-overlay h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.modal-details {
+  padding: 20px 40px 40px 40px;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.match-score {
+  color: #46d369;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #d2d2d2;
+  white-space: pre-line;
+}
+
+.modal-tech-stack h3 {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .modal-image-container {
+    height: 250px;
+  }
+  
+  .modal-image-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .modal-details {
+    padding: 20px;
+  }
+}
