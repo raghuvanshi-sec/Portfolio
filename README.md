@@ -1,8 +1,9 @@
+
 # 🎬 Satyam's Portfolio
 
 > **"Who's watching?"** — A cinematic journey through code, creativity, and cybersecurity.
 
-![Netflix Style Portfolio](/screenshots/introduction.png)
+![Netflix Style Portfolio](public/screenshots/introduction.png)
 
 ## 🌟 Overview
 
@@ -31,29 +32,29 @@ Instead of static text, users explore "Episodes" of my life, browse "Seasons" of
   - **Cinematic Storytelling**: Rich visuals and narratives explaining how these passions shape my professional mindset.
 
 - **📜 Certifications Vault**:
-  - Grid layout showcasing verified credentials from Cisco, Fortinet, and more.
-  - Interactive "Info" modals for credential verification.
+  - **Grid Layout**: Showcasing verified credentials from Cisco, Fortinet, and more.
+  - **Interactive Modals**: "Info" modals for credential verification.
 
 ## 📸 Visual Tour
 
 | **The Gateway (Profile Selection)** |
 
 |:---:|
-| ![The Gateway (Profile Selection)](/screenshots/profile-gate.png) |
+| ![The Gateway (Profile Selection)](public/screenshots/profile-gate.png) |
 
 | **Cinematic Intro** | **Immersive Hero** |
 
 |:---:|:---:|
-| ![Cinematic Intro](/screenshots/introduction.png) | ![Immersive Hero](/screenshots/project-hero.png) |
+| ![Cinematic Intro](public/screenshots/introduction.png) | ![Immersive Hero](public/screenshots/project-hero.png) |
 
 | **Category Rows** | **Gamified Journey** |
 
 |:---:|:---:|
-| ![Category Rows](/screenshots/project-rows.png) | ![Gamified Journey](/screenshots/achievements.png) |
+| ![Category Rows](public/screenshots/project-rows.png) | ![Gamified Journey](public/screenshots/achievements.png) |
 
 | **Bonus Features (Hobbies)** |
 | :---: |
-| ![Bonus Features (Hobbies)](/screenshots/hobbies.png) |
+| ![Bonus Features (Hobbies)](public/screenshots/hobbies.png) |
 
 ## 🛠️ Tech Stack
 
@@ -72,18 +73,29 @@ Instead of static text, users explore "Episodes" of my life, browse "Seasons" of
 ## ⚡ Getting Started
 
 1. **Clone the repository**
-2.
 
-   git clone <https://github.com/raghuvanshi-sec/portfolio.git>
+   ```bash
+   git clone https://github.com/raghuvanshi-sec/portfolio.git
+   ```
 
-1. **Open your browser**
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
    Navigate to `http://localhost:5173` to start the experience.
 
 ## 📱 Responsiveness
 
-Fully optimized for all devices:
-
-- **Desktop**: Hover effects, paralax scrolling, and expansive grids.
+- **Desktop**: Hover effects, parallax scrolling, and expansive grids.
 - **Mobile**: Touch-friendly sliders, responsive typography, and adaptive layouts.
 
 ## 📬 Contact
@@ -96,4 +108,12 @@ Ready to collaborate on the next blockbuster project?
 
 ---
 *Created with ❤️ and ☕
-by Satyam Raghuvanshi © 2026*
+ by Satyam Raghuvanshi © 2026*
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
