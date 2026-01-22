@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p className="footer-text">Questions? Contact me at <a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p className="footer-text">Questions? Contact me at <a href="mailto:satyamraghuvanshi220ct@gmail.com">satyamraghuvanshi220ct@gmail.com</a></p>
         <div className="footer-links">
           <a href="#">FAQ</a>
           <a href="#">Help Center</a>

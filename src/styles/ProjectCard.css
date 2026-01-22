@@ -14,8 +14,7 @@
   transform: scale(1.4);
   z-index: var(--hover-z-index);
   box-shadow: 0 10px 20px rgba(0,0,0,0.7);
-  /* origin adjustment not strictly needed if padding is sufficient, but let's ensure safety */
-  transform-origin: center center; 
+  /* transform-origin: center center; Default is fine now with buffer */
 }
 
 .project-card img {
