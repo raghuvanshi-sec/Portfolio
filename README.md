@@ -4,8 +4,6 @@
 
 This is not a standard template. It is a high-performance, conversion-optimized personal platform built for **Satyam Raghuvanshi**, sitting at the intersection of **Cybersecurity, Machine Learning, and Creative Development**.
 
-![Portfolio Preview](public/images/profile-intro.jpg)
-
 ## 🚀 The Philosophy: "Respect the Recruiter's Time"
 
 Most portfolios are passive museums. This one is an **Active Decision Engine**.
