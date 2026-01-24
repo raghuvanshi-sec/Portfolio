@@ -1,5 +1,254 @@
+/* --- AUTHORITY DESIGN SYSTEM (MODAL OVERHAUL) --- */
+
+/* Expand Modal for Authority Mode */
+.modal-content.authority-mode {
+  max-width: 1100px; /* Wider for desktop */
+  background-color: #0a0a0a; /* Darker, more premium bg */
+}
+
+/* 1. HERO SECTION */
+.case-hero {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.case-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, #0a0a0a 10%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0.4) 100%);
+}
+
+.case-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 4rem;
+  width: 100%;
+}
+
+.case-hero-content h1 {
+  font-size: 4rem; /* Massive Title */
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.case-subtitle {
+  font-size: 1.5rem;
+  color: #d2d2d2;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.case-impact {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  border-left: 4px solid #e50914;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-meta-chips {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.meta-chip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #eee;
+  backdrop-filter: blur(5px);
+}
+
+.case-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 2. SHARED SECTION STYLES */
+.case-study-container {
+  padding: 0;
+}
+
+.case-section {
+  padding: 3rem 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.case-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.case-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #e50914; /* Accent Color Headers */
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.case-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #a3a3a3;
+  max-width: 900px;
+}
+
+/* 4. APPROACH LIST */
+.approach-list {
+  list-style: none;
+  padding: 0;
+}
+
+.approach-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.approach-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e50914;
+  font-weight: bold;
+}
+
+/* 5. TECH STACK CHIPS */
+.tech-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-chip-large {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #eee;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tech-chip-large:hover {
+  border-color: #e50914;
+  background: #222;
+}
+
+/* 6. ARCHITECTURE */
+.architecture-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border: 1px solid #333;
+}
+
+/* 7. FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.06);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 10px 0 5px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+/* 10. GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* 11. FOOTER */
+.case-footer {
+  padding: 4rem;
+  background: #111;
+  text-align: center;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #e50914;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .case-hero { height: 50vh; }
+  .case-hero-content { padding: 2rem 1.5rem; }
+  .case-hero-content h1 { font-size: 2.5rem; }
+  .case-section { padding: 2rem 1.5rem; }
+}
+
+/* Legacy Fallback Styles (kept if needed) */
 .modal-overlay {
   position: fixed;
+/* ... rest matches original ... */
   top: 0;
   left: 0;
   width: 100%;
@@ -110,6 +359,63 @@
   margin-top: 30px;
   display: flex;
   gap: 20px;
+}
+
+/* Case Study Styles */
+.case-study-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.case-section h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-left: 3px solid #e50914;
+  padding-left: 10px;
+}
+
+.case-section p {
+  color: #d1d1d1;
+  line-height: 1.6;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.feature-list li {
+  color: #ccc;
+  position: relative;
+  padding-left: 20px;
+}
+
+.feature-list li::before {
+  content: "•";
+  color: #e50914;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.case-section.highlight {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.case-section.highlight h3 {
+  border-left: none;
+  padding-left: 0;
+  color: #46d369; /* Success green */
 }
 
 @keyframes fadeIn {

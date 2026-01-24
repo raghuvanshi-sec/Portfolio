@@ -8,6 +8,10 @@ const HeroBanner = () => {
         <p className="hero-subtitle">
           Building immersive web experiences, robust AI models, and secure systems.
         </p>
+        <p className="hero-context-subtitle">
+          Selected projects showcasing my expertise in full-stack development, cybersecurity, and AI-driven systems.
+        </p>
+        
         <div className="hero-buttons">
           <button 
             className="btn btn-primary"
@@ -19,6 +23,10 @@ const HeroBanner = () => {
             <span className="icon">ℹ</span> More Info
           </button>
         </div>
+        
+        <a href="https://github.com/raghuvanshi-sec/PhishGuard" target="_blank" rel="noopener noreferrer" className="hero-mini-cta">
+          Or explore my flagship project →
+        </a>
       </div>
       <div className="hero-overlay"></div>
     </header>

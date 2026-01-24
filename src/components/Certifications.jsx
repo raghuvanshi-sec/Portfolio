@@ -1,163 +1,104 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import '../styles/Section.css';
 import '../styles/Certifications.css';
 import Navbar from './Navbar';
+import certificationsData from '../data/certifications.json';
 
-const certificates = [
-  { 
-    name: "AI/ML Certificate", 
-    file: "Ai-Ml certificate.pdf", 
-    org: "Course", 
-    img: "thumb_ai.png",
-    description: "Comprehensive course calling Machine Learning algorithms, Neural Networks, and AI ethics." 
-  },
-  { 
-    name: "Android Development", 
-    file: "Android Dev Certificate.pdf", 
-    org: "Course", 
-    img: "thumb_code.png",
-    description: "Built native Android apps using Java/Kotlin, covering UI design, fragments, and API integration." 
-  },
-  { 
-    name: "Business Analyst", 
-    file: "Business Analyst Certificate.pdf", 
-    org: "Course", 
-    img: "thumb_data.png",
-    description: "Learned data-driven decision making, requirements gathering, and stakeholder management." 
-  },
-  { 
-    name: "CCNA", 
-    file: "CCNA certificate.pdf", 
-    org: "Cisco", 
-    img: "thumb_network.png",
-    description: "Network fundamentals, IP connectivity, security fundamentals, and automation." 
-  },
-  { 
-    name: "Ethical Hacking", 
-    file: "Ethical Hacker Certificate.pdf", 
-    org: "Course", 
-    img: "thumb_security.png",
-    description: "Penetration testing methodologies, vulnerability assessment, and network defense strategies." 
-  },
-  { 
-    name: "Gemini Student", 
-    file: "Gemini student certificate.pdf", 
-    org: "Google", 
-    img: "thumb_ai.png",
-    description: "Specialized training on Google's Gemini models and prompt engineering." 
-  },
-  { 
-    name: "Generative AI", 
-    file: "GenAI certificate.pdf", 
-    org: "Course", 
-    img: "thumb_ai.png",
-    description: "Deep dive into GANs, Transformers, LLMs, and content generation pipelines." 
-  },
-  { 
-    name: "ISC2 CPE Credits", 
-    file: "ISC2_CPE_credits_-_lecture.pdf", 
-    org: "ISC2", 
-    img: "thumb_security.png",
-    description: "Continuing professional education credits in cybersecurity topics." 
-  },
-  { 
-    name: "Cybersecurity Intro", 
-    file: "Introduction_to_Cybersecurity_certificate_satyamraghuvanshi220ct-gmail-com_4a995ad0-8aa6-4713-b085-876de47d8612.pdf", 
-    org: "Cisco", 
-    img: "thumb_security.png",
-    description: "Foundational concepts of information security, threats, and countermeasures." 
-  },
-  { 
-    name: "IoT & Digital Trans", 
-    file: "IoT and Digital Transmission certificate.pdf", 
-    org: "Course", 
-    img: "thumb_network.png",
-    description: "Internet of Things architecture, sensor integration, and data transmission protocols." 
-  },
-  { 
-    name: "Microchip AICTE", 
-    file: "Microchip AICTE certificate.pdf", 
-    org: "AICTE", 
-    img: "thumb_ai.png",
-    description: "Internship program focused on embedded systems and microcontroller applications." 
-  },
-  { 
-    name: "Network Security", 
-    file: "Network Security Certificate.pdf", 
-    org: "Course", 
-    img: "thumb_security.png",
-    description: "Securing network infrastructure, firewalls, VPNs, and intrusion detection systems." 
-  },
-  { 
-    name: "Oracle Certificate", 
-    file: "Oracle certificate.pdf", 
-    org: "Oracle", 
-    img: "thumb_data.png",
-    description: "Database management, SQL proficiency, and Oracle cloud infrastructure basics." 
-  },
-  { 
-    name: "Forage Job Sim", 
-    file: "forage certificate.pdf", 
-    org: "Forage", 
-    img: "thumb_data.png",
-    description: "Virtual work experience program simulating real-world tasks in software engineering." 
-  },
-  { 
-    name: "Certificate", 
-    file: "_certificate_satyamraghuvanshi220ct-gmail-com_0864ff79-67ef-4309-804a-1341442a560f.pdf", 
-    org: "Course", 
-    img: "thumb_code.png",
-    description: "General certification of completion for technical coursework." 
-  }
-];
+const CATEGORIES = ["All", "AI / ML", "Cybersecurity", "Web Development", "Data Science"];
 
 const Certifications = ({ onSearch }) => {
-  const [selectedCert, setSelectedCert] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredCerts = useMemo(() => {
+    let filtered = certificationsData;
+    
+    if (activeFilter !== "All") {
+      filtered = filtered.filter(cert => cert.category === activeFilter || (activeFilter === "Other" && !CATEGORIES.includes(cert.category)));
+    }
+
+    // Sort: Featured first, then newest year first
+    return filtered.sort((a, b) => {
+      if (a.featured === b.featured) {
+        return parseInt(b.year) - parseInt(a.year);
+      }
+      return a.featured ? -1 : 1;
+    });
+  }, [activeFilter]);
 
   const handleCardClick = (fileName) => {
-    window.open(`/certificates/${fileName}`, '_blank');
+    // Check if filename is a full URL or local path
+    const url = fileName.startsWith('http') ? fileName : `/certificates/${fileName}`;
+    window.open(url, '_blank');
   };
-
-  const handleInfoClick = (e, cert) => {
-    e.stopPropagation(); // Prevent card click
-    setSelectedCert(cert);
-  };
-
-  const closeInfo = () => setSelectedCert(null);
 
   return (
     <div className="section-page">
       <Navbar onSearch={onSearch} />
       <div className="section-content fade-in">
-        <h1>Certifications</h1>
         
+        {/* Section Header */}
+        <div className="cert-header">
+          <h1>Certifications</h1>
+          <p className="cert-subtitle">
+            Industry-recognized credentials validating my expertise in AI, cybersecurity, and full-stack development.
+          </p>
+        </div>
+
+        {/* Filter Chips */}
+        <div className="cert-filters">
+          {CATEGORIES.map(category => (
+            <button
+              key={category}
+              className={`filter-chip ${activeFilter === category ? 'active' : ''}`}
+              onClick={() => setActiveFilter(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        
+        {/* Certificate Grid */}
         <div className="cert-grid">
-          {certificates.map((cert, index) => (
+          {filteredCerts.map((cert) => (
             <div 
-              key={index} 
+              key={cert.id} 
               className="cert-card" 
               onClick={() => handleCardClick(cert.file)}
-              title="Click to view PDF"
             >
-              <div className="cert-image-container">
-                <img 
-                  src={`/certificates/${cert.img}`} 
-                  alt={cert.name} 
-                />
+              {/* Card Background (Thumbnail) */}
+              <div className="cert-thumbnail">
+                <img src={cert.image} alt={cert.title} loading="lazy" />
+                <div className="cert-overlay-gradient"></div>
               </div>
               
-              <div className="cert-details-overlay">
-                <div className="cert-title">{cert.name}</div>
-                <div className="cert-org">{cert.org}</div>
-                <div className="cert-actions">
-                  <button className="cert-btn">
-                    <span>▶</span> View
-                  </button>
-                  <button 
-                    className="cert-btn secondary"
-                    onClick={(e) => handleInfoClick(e, cert)}
-                  >
-                    <span>+</span> Info
+              {/* Visible Content (Default) */}
+              <div className="cert-content-visible">
+                <div className="cert-top-row">
+                   {cert.badge && <span className="cert-badge">{cert.badge}</span>}
+                </div>
+                <div className="cert-main-info">
+                  <h3 className="cert-title">{cert.title}</h3>
+                  <div className="cert-meta">
+                    <span className="cert-issuer">{cert.issuer}</span>
+                    <span className="cert-year">{cert.year}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hover Overlay */}
+              <div className="cert-hover-overlay">
+                <div className="hover-content">
+                  <h3 className="hover-title">{cert.title}</h3>
+                  <p className="hover-issuer">{cert.issuer} • {cert.year}</p>
+                  
+                  <div className="hover-skills">
+                    {cert.skills.slice(0, 4).map((skill, i) => (
+                      <span key={i} className="skill-tag">{skill}</span>
+                    ))}
+                  </div>
+
+                  <button className="view-cert-btn">
+                    View Certificate →
                   </button>
                 </div>
               </div>
@@ -165,33 +106,17 @@ const Certifications = ({ onSearch }) => {
           ))}
         </div>
 
-        {/* Info Modal */}
-        {selectedCert && (
-          <div className="modal-overlay" onClick={closeInfo}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
-              <button className="modal-close" onClick={closeInfo}>×</button>
-              <div className="modal-header">
-                 <h2>{selectedCert.name}</h2>
-                 <span className="modal-badge">{selectedCert.org}</span>
-              </div>
-              <div className="modal-body">
-                <p style={{fontSize: '1.1rem', lineHeight: '1.6', color: '#ccc'}}>
-                  {selectedCert.description}
-                </p>
-                <button 
-                  className="btn-primary" 
-                  style={{marginTop: '20px', width: '100%'}}
-                  onClick={() => handleCardClick(selectedCert.file)}
-                >
-                  View Certificate PDF
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Bottom CTA */}
+        <div className="cert-footer">
+            <a href="#" className="download-all-btn">
+                📄 Download All Certificates (ZIP) →
+            </a>
+        </div>
+
       </div>
     </div>
   );
 };
 
 export default Certifications;
+

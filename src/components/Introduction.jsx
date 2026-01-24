@@ -1,42 +1,68 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/Section.css';
 import '../styles/Introduction.css';
 import Navbar from './Navbar';
 
 const Introduction = ({ onSearch }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="section-page intro-container">
       <Navbar onSearch={onSearch} />
       
       {/* Hero Section */}
       <div className="intro-hero fade-in">
-        <div className="netflix-original-badge">
-          <span className="n-logo">N</span>
-          <span className="original-text">A NETFLIX ORIGINAL DOCUMENTARY</span>
-        </div>
         <h1 className="intro-title">SATYAM RAGHUVANSHI</h1>
         
-        <div className="intro-metadata">
-          <span className="match-score">99% Match</span>
-          <span className="year">2026</span>
-          <span className="maturity-rating">U/A 18+</span>
-          <span className="seasons">Limited Series</span>
-          <span className="genre-tag">Biographical</span>
-          <span className="quality-badge">4K HDR</span>
+        <div className="role-container">
+          <span className="role-primary">Full-Stack Developer</span>
+          <div className="role-secondary">
+            <span>UI/UX</span>
+            <span className="dot">•</span>
+            <span>Machine Learning</span>
+            <span className="dot">•</span>
+            <span>Cybersecurity</span>
+          </div>
         </div>
 
-        <p className="intro-synopsis">
-          A dynamic Web Developer and Ethical Hacker with a keen eye for UI/UX design. 
-          Skilled in building responsive, user-friendly applications and identifying 
-          security vulnerabilities. Committed to creating intuitive interfaces and 
-          staying ahead of the latest tech trends.
-        </p>
+        <div className="intro-metadata">
+          <span className="cred-badge">Spark Tank Winner</span>
+          <span className="cred-badge">Best Photographer</span>
+          <span className="cred-badge">5+ Major Projects</span>
+        </div>
+
+        <div className="intro-content-wrapper">
+          <p className="intro-synopsis">
+            I’m a developer who believes technology should feel magic, not just functional.<br/>
+            Blending the precision of cybersecurity with the creativity of AI, I build digital experiences that are intuitive, secure, and—above all—impactful.
+          </p>
+          <div className="intro-image-container">
+            <img src="/images/profile-intro.jpg" alt="Satyam Raghuvanshi" className="intro-profile-img" />
+          </div>
+        </div>
 
         <div className="intro-actions">
-          <a href="/resume.pdf" download="Satyam_Raghuvanshi_Resume.pdf" className="btn-white" style={{textDecoration: 'none'}}>
-            <span style={{fontSize: '1.2rem'}}>📥</span> Download Resume
+          <a href="/resume.pdf" download="Satyam_Raghuvanshi_Resume.pdf" className="btn-primary" style={{textDecoration: 'none'}}>
+            🔥 Download Resume
           </a>
-          <button className="btn-gray" onClick={() => document.getElementById('episodes-section').scrollIntoView({behavior: 'smooth'})}>
-            <span style={{fontSize: '1.2rem'}}>ℹ️</span> My Journey
+          <button className="btn-outline" onClick={() => document.getElementById('episodes-section').scrollIntoView({behavior: 'smooth'})}>
+            🚀 Explore My Work
+          </button>
+        </div>
+
+        {/* Proof of Work Navigation */}
+        <div className="intro-secondary-actions" style={{marginTop: '20px', display: 'flex', gap: '15px', justifyContent: 'center'}}>
+          <button 
+            className="nav-pill-btn" 
+            onClick={() => navigate('/achievements')}
+          >
+            View Achievements
+          </button>
+          <button 
+            className="nav-pill-btn" 
+            onClick={() => navigate('/certifications')}
+          >
+            View Certifications
           </button>
         </div>
       </div>

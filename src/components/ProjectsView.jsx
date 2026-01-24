@@ -26,6 +26,24 @@ const ProjectsView = ({
             onProjectClick={onProjectClick} 
           />
         ))}
+        
+        <div className="view-all-container" style={{display: 'flex', justifyContent: 'center', marginTop: '40px'}}>
+          <a href="https://github.com/raghuvanshi-sec?tab=repositories" target="_blank" rel="noopener noreferrer" 
+             style={{
+               background: '#e50914', 
+               color: 'white', 
+               padding: '12px 30px', 
+               textDecoration: 'none', 
+               fontWeight: 'bold', 
+               borderRadius: '4px',
+               fontSize: '1.2rem',
+               display: 'flex',
+               alignItems: 'center',
+               gap: '10px'
+             }}>
+             View All Projects →
+          </a>
+        </div>
       </div>
 
       <Modal 

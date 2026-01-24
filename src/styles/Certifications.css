@@ -1,8 +1,234 @@
+/* Header & Filters */
+.cert-header {
+  margin-bottom: 2rem;
+  padding-left: 4%;
+}
+
+.cert-subtitle {
+  color: #a3a3a3;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-top: 0.5rem;
+}
+
+.cert-filters {
+  display: flex;
+  gap: 10px;
+  padding-left: 4%;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.filter-chip:hover, .filter-chip.active {
+  background: #e50914; /* Netflix Red */
+  border-color: #e50914;
+  color: white;
+}
+
+/* Grid Layout */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px 0;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 4% 40px;
+}
+
+/* Card Design */
+.cert-card {
+  position: relative;
+  aspect-ratio: 4/3; /* Standard Certificate Ratio */
+  background-color: #1a1a1a;
+  border-radius: 8px; /* Slightly softer corners */
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+/* Thumbnail & Background */
+.cert-thumbnail {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cert-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+}
+
+.cert-overlay-gradient {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 10%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Default Visible Content */
+.cert-content-visible {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  z-index: 2;
+  transition: opacity 0.3s;
+}
+
+.cert-card:hover .cert-content-visible {
+  opacity: 0;
+}
+
+.cert-badge {
+/* ... existing badge styles ... */
+  background: #e50914;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  /* Prevent overlap with year if on same line, though here they are stacked or flexed */
+}
+
+.cert-main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #ccc;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Hover Overlay */
+.cert-hover-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 10, 10, 0.96); /* Increased opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+  z-index: 5; /* Ensure above visible content */
+}
+
+.cert-card:hover .cert-hover-overlay {
+  opacity: 1;
+}
+
+.hover-title {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.hover-issuer {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.hover-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  background: rgba(255,255,255,0.1);
+  color: #ddd;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.view-cert-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.view-cert-btn:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+/* Footer CTA */
+.cert-footer {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.download-all-btn {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.download-all-btn:hover {
+  border-color: #fff;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+}
+
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 .cert-card {

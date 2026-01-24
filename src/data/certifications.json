@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "title": "Gemini Student",
+    "issuer": "Google",
+    "year": "2025",
+    "category": "AI / ML",
+    "image": "/certificates/thumb_ai.png",
+    "file": "Gemini student certificate.pdf",
+    "skills": ["Generative AI", "LLMs", "Prompt Engineering"],
+    "badge": "FEATURED",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Ethical Hacking",
+    "issuer": "Course",
+    "year": "2024",
+    "category": "Cybersecurity",
+    "image": "/certificates/thumb_security.png",
+    "file": "Ethical Hacker Certificate.pdf",
+    "skills": ["Penetration Testing", "Network Security", "Vulnerability Assessment"],
+    "badge": "TOP CERT",
+    "featured": true
+  },
+  {
+    "id": 11,
+    "title": "Generative AI",
+    "issuer": "Course",
+    "year": "2025",
+    "category": "AI / ML",
+    "image": "/certificates/thumb_ai.png",
+    "file": "GenAI certificate.pdf",
+    "skills": ["GANs", "Transformers", "Content Generation"],
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "CCNA",
+    "issuer": "Cisco",
+    "year": "2024",
+    "category": "Cybersecurity",
+    "image": "/certificates/thumb_network.png",
+    "file": "CCNA certificate.pdf",
+    "skills": ["Network Fundamentals", "IP Connectivity", "Security Basics"],
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Microchip AICTE Internship",
+    "issuer": "AICTE",
+    "year": "2024",
+    "category": "Web Development",
+    "image": "/certificates/thumb_ai.png",
+    "file": "Microchip AICTE certificate.pdf",
+    "skills": ["Embedded Systems", "Microcontrollers", "IoT"],
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Android Development",
+    "issuer": "Course",
+    "year": "2023",
+    "category": "Web Development",
+    "image": "/certificates/thumb_code.png",
+    "file": "Android Dev Certificate.pdf",
+    "skills": ["Android", "Java", "Kotlin", "Mobile UI"],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Network Security",
+    "issuer": "Course",
+    "year": "2024",
+    "category": "Cybersecurity",
+    "image": "/certificates/thumb_security.png",
+    "file": "Network Security Certificate.pdf",
+    "skills": ["Firewalls", "VPNs", "IDS/IPS"],
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Business Analyst",
+    "issuer": "Course",
+    "year": "2025",
+    "category": "Data Science",
+    "image": "/certificates/thumb_data.png",
+    "file": "Business Analyst Certificate.pdf",
+    "skills": ["Data Analysis", "Requirements Engineering", "Stakeholder Mgmt"],
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Oracle Certificate",
+    "issuer": "Oracle",
+    "year": "2025",
+    "category": "Data Science",
+    "image": "/certificates/thumb_data.png",
+    "file": "Oracle certificate.pdf",
+    "skills": ["SQL", "Database Management", "Cloud Infrastructure"],
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "IoT & Digital Transmission",
+    "issuer": "Course",
+    "year": "2025",
+    "category": "Web Development",
+    "image": "/certificates/thumb_network.png",
+    "file": "IoT and Digital Transmission certificate.pdf",
+    "skills": ["IoT Architecture", "Sensors", "Protocols"],
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Forage Job Sim",
+    "issuer": "Forage",
+    "year": "2024",
+    "category": "Web Development",
+    "image": "/certificates/thumb_data.png",
+    "file": "forage certificate.pdf",
+    "skills": ["Software Engineering", "Simulation", "Problem Solving"],
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "ISC2 CPE Credits",
+    "issuer": "ISC2",
+    "year": "2024",
+    "category": "Cybersecurity",
+    "image": "/certificates/thumb_security.png",
+    "file": "ISC2_CPE_credits_-_lecture.pdf",
+    "skills": ["Cybersecurity", "Ethics", "Compliance"],
+    "featured": false
+  },
+  {
+    "id": 13,
+    "title": "Cybersecurity Intro",
+    "issuer": "Cisco",
+    "year": "2023",
+    "category": "Cybersecurity",
+    "image": "/certificates/thumb_security.png",
+    "file": "Introduction_to_Cybersecurity_certificate.pdf",
+    "skills": ["Threats", "Countermeasures", "Security Basics"],
+    "featured": false
+  }
+]

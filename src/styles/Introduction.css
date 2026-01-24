@@ -24,120 +24,188 @@
   justify-content: center;
 }
 
-/* Netflix Original Badge */
-.netflix-original-badge {
+/* Netflix Original Badge Removed */
+
+.intro-title {
+  font-size: 2.5rem; /* Reduced from 4.5rem to ~36-40px equivalent */
+  font-weight: 800;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  line-height: 1.1;
+}
+
+/* Role Styles */
+.role-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.role-primary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.role-secondary {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
-  font-family: 'Bebas Neue', 'Roboto', sans-serif;
-  letter-spacing: 2px;
-  font-weight: 700;
-  color: #dbdbdb;
-  font-size: 0.9rem;
-}
-
-.n-logo {
-  color: #e50914;
-  font-size: 1.8rem;
-  font-weight: 900;
-}
-
-.original-text {
-  letter-spacing: 4px;
-}
-
-.intro-title {
-  font-size: 4.5rem;
-  font-weight: 900;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #a3a3a3;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: -2px; /* Tighter for movie title feel */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  line-height: 0.9;
+  letter-spacing: 1px;
+}
+
+.role-secondary .dot {
+  color: #e50914; /* Accent color for dots */
+  font-weight: bold;
 }
 
 .intro-metadata {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  color: #a3a3a3;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #d1d1d1;
   font-weight: 500;
 }
 
-.match-score {
-  color: #46d369; /* Netflix match green */
-  font-weight: bold;
+.cred-badge {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
-.maturity-rating {
-  border: 1px solid #a3a3a3;
-  padding: 0 5px;
-  font-size: 0.9rem;
+.cred-badge:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-.genre-tag {
-  color: #fff;
-  font-weight: 500;
-  padding: 0 5px;
-}
-
-.quality-badge {
-  border: 1px solid #a3a3a3;
-  border-radius: 3px;
-  padding: 0 5px;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+.intro-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 35px;
+  max-width: 900px;
 }
 
 .intro-synopsis {
-  max-width: 600px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  color: #fff;
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  margin-bottom: 0; /* Wrapper handles spacing */
+}
+
+.intro-image-container {
+  flex-shrink: 0;
+}
+
+.intro-profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px; /* Soft square modern look */
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.intro-profile-img:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .intro-content-wrapper {
+    flex-direction: column-reverse; /* Image on top of text usually looks better, but let's see. Actually strictly 'beside' implies text then image. If stacked, Image top is standard for profiles. Let's try column-reverse to put image above text? No, wrapper is below title. Title -> Text -> Image. If column-reverse: Title -> Image -> Text. That works. */
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .intro-profile-img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .intro-actions {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
-/* Reusing .btn styles but ensuring specificity */
-.btn-white {
-  background-color: white;
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  font-size: 1.1rem;
-}
-
-.btn-white:hover {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-.btn-gray {
-  background-color: rgba(109, 109, 110, 0.7);
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
   color: white;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
   border: none;
   font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
 }
 
-.btn-gray:hover {
-  background-color: rgba(109, 109, 110, 0.4);
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.nav-pill-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.nav-pill-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* Section Dividers */

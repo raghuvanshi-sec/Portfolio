@@ -2,34 +2,350 @@
   {
     "id": 1,
     "title": "PhishGuard",
+    "shortDescription": "AI-based phishing detection system",
     "description": "PhishGuard is a machine learning–based phishing detection system that identifies malicious emails, messages, and URLs by analyzing suspicious language, deceptive links, and social engineering patterns.",
-    "category": "Cybersecurity Tools",
+    "category": "Cybersecurity Projects",
     "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=2069&auto=format&fit=crop",
     "techStack": ["Python", "Machine Learning", "AI Detection"],
+    "size": "large",
+    "badge": "FEATURED",
+    "metadata": "AI-Based",
     "links": {
       "github": "https://github.com/raghuvanshi-sec/PhishGuard",
+      "demo": "https://phishguard-e38r.onrender.com"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "AI-Based Phishing Detection System",
+            "impact": "🚨 Detects malicious URLs & emails using machine learning",
+            "metaChips": ["AI-Based", "Cybersecurity", "Full-Stack", "ML"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "PhishGuard is an AI-powered cybersecurity tool designed to detect phishing URLs and malicious emails in real time. The system leverages machine learning models trained on real-world datasets to classify threats with high accuracy. Built with a FastAPI backend and a modern web interface, PhishGuard provides instant risk analysis for users and organizations seeking proactive digital security."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "Phishing attacks remain one of the most common cybersecurity threats, causing data breaches, financial loss, and identity theft. Existing tools are often complex, slow, or inaccessible to non-technical users. There was a need for a lightweight, real-time solution that could accurately classify phishing attempts and present results in a user-friendly interface."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Designed a machine learning pipeline for URL and email text classification",
+                "Trained models using Scikit-Learn on phishing datasets",
+                "Built a FastAPI backend for real-time prediction APIs",
+                "Developed a responsive frontend for instant threat feedback",
+                "Implemented MongoDB for logging and analytics"
+            ]
+        },
+        "techStackDetail": [
+            "Python", "FastAPI", "Scikit-Learn", "MongoDB", "HTML", "CSS", "JavaScript"
+        ],
+        "architecture": {
+            "title": "System Architecture",
+            "text": "The system follows a modular architecture where the frontend communicates with a FastAPI backend that hosts the trained ML model. User inputs are processed, classified, and stored in MongoDB for analytics and reporting.",
+            "image": "https://images.unsplash.com/photo-1558494949-efc02570fbc9?q=80&w=2070&auto=format&fit=crop"
+        },
+        "features": [
+            { "title": "Real-time Detection", "icon": "🔐", "desc": "Instant analysis of URLs and emails" },
+            { "title": "ML Classification", "icon": "🧠", "desc": "High-accuracy threat checking" },
+            { "title": "Threat Reporting", "icon": "📊", "desc": "Detailed logs and analytics" },
+            { "title": "FastAPI Backend", "icon": "⚡", "desc": "High-performance API layer" }
+        ],
+        "impact": [
+            "🚀 Achieved high detection accuracy on test datasets",
+            "🔍 Processed phishing URLs in under 1 second",
+            "👨‍💻 Used in academic cybersecurity demonstration",
+            "🏆 Featured as a flagship project in my portfolio"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "One of the main challenges was handling imbalanced phishing datasets, which required careful preprocessing and model tuning. I also learned how to deploy ML models behind REST APIs using FastAPI and optimize inference performance for real-time classification."
+        },
+        "gallery": [
+            "/phishguard-1.png",
+            "/phishguard-2.png",
+            "/phishguard-3.png"
+        ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "SIH Problem Solver",
+    "shortDescription": "National Hackathon Solution",
+    "description": "This project was developed as part of Smart India Hackathon 2025 to solve a real-world problem using innovative technology solutions.",
+    "category": "Featured Projects",
+    "image": "/sih-2025-win.jpg",
+    "techStack": ["React", "Node.js", "Python", "APIs"],
+    "size": "large",
+    "badge": "HACKATHON WINNER",
+    "metadata": "SIH 2025",
+    "links": {
+      "github": "#",
       "demo": "#"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "National Hackathon Solution",
+            "impact": "🇮🇳 Qualified for SIH 2025 Round 2",
+            "metaChips": ["Hackathon", "Innovation", "Full-Stack", "ML"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "This project was developed as part of Smart India Hackathon 2025 to solve a real-world problem using innovative technology solutions. The system was evaluated for scalability, technical depth, and social impact."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "India faces critical challenges in digital service delivery and data accessibility. The goal was to design a scalable solution that addresses a real societal or industrial problem with measurable impact."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Conducted problem research & ideation",
+                "Designed scalable system architecture",
+                "Built a full-stack web solution",
+                "Integrated APIs and ML components",
+                "Collaborated in a multi-member team"
+            ]
+        },
+        "techStackDetail": [
+            "React", "Node.js", "Python", "APIs", "MongoDB"
+        ],
+        "features": [
+            { "title": "Real-world Problem Solving", "icon": "🇮🇳", "desc": "Addresses societal needs" },
+            { "title": "Scalable Platform", "icon": "🌐", "desc": "Production-ready architecture" },
+            { "title": "ML Insights", "icon": "🧠", "desc": "Data-driven decision making" },
+            { "title": "Team Collaboration", "icon": "🤝", "desc": "Multi-disciplinary effort" }
+        ],
+        "impact": [
+            "🏆 Qualified for SIH 2025 Round 2",
+            "🚀 Recognized for innovation & feasibility",
+            "👨‍💻 Strengthened full-stack teamwork skills",
+            "📈 Improved system design expertise"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "Rapid prototyping under time constraints required prioritization and team coordination. This experience sharpened my product thinking and leadership skills."
+        }
+    }
+  },
+  {
+    "id": 9,
+    "title": "Hex Inspector",
+    "shortDescription": "Binary & Memory Forensics Tool",
+    "description": "Advanced web-based binary file analyzer capable of handling large files with virtualization.",
+    "category": "Cybersecurity Projects",
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["React", "Virtualization", "Web Workers"],
+    "size": "medium",
+    "metadata": "Forensics Tool",
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/HexInspector",
+      "demo": "#"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "Binary & Memory Forensics Analysis Tool",
+            "impact": "🔍 Deep inspection of binary files for forensic investigation",
+            "metaChips": ["Forensics", "Security", "Python", "CLI"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "Hex Inspector is a lightweight forensic analysis tool designed to inspect binary and memory dump files for hidden patterns, anomalies, and suspicious data structures. Built for cybersecurity analysis and digital investigations, it enables analysts to quickly parse raw binary data and extract meaningful insights."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "Traditional forensic tools are often heavyweight, GUI-bound, and slow for quick investigations. There was a need for a fast, command-line–based utility that could scan binary files, detect anomalies, and provide structured outputs for deeper forensic workflows."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Designed a modular CLI tool for binary file parsing",
+                "Implemented hex dumping and pattern scanning logic",
+                "Built detection logic for suspicious byte sequences",
+                "Added exportable reports for forensic analysis",
+                "Optimized performance for large file scanning"
+            ]
+        },
+        "techStackDetail": [
+            "Python", "Memory Forensics", "CLI", "Regex", "File I/O"
+        ],
+        "features": [
+            { "title": "Binary Parsing", "icon": "🔍", "desc": "Deep file inspection" },
+            { "title": "Anomaly Detection", "icon": "🧠", "desc": "Finds hidden patterns" },
+            { "title": "Hex Visualization", "icon": "📄", "desc": "Structured data view" },
+            { "title": "Forensic Reports", "icon": "📊", "desc": "Exportable analysis" }
+        ],
+        "impact": [
+            "🚀 Enabled fast forensic inspection workflows",
+            "🔍 Reduced investigation time for binary analysis",
+            "👨‍💻 Used for cybersecurity learning & demos",
+            "📈 Strengthened memory forensics expertise"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "Handling large binary files efficiently required performance optimization and memory management techniques. This project deepened my understanding of file I/O operations and forensic data analysis workflows."
+        }
     }
   },
   {
     "id": 2,
     "title": "PhishHunter",
+    "shortDescription": "Lightweight Phishing Detection Utility",
     "description": "HTML-based phishing detection or simulation tool designed to identify and track deceptive phishing attempts.",
-    "category": "Cybersecurity Tools",
+    "category": "Cybersecurity Projects",
     "image": "https://images.unsplash.com/photo-1563206767-5b1d972e9fb9?q=80&w=2070&auto=format&fit=crop",
     "techStack": ["HTML", "Security Analysis"],
+    "size": "medium",
+    "metadata": "Security Tool",
     "links": {
       "github": "https://github.com/raghuvanshi-sec/phishhunter",
+      "demo": "#"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "Lightweight Phishing Detection Utility",
+            "impact": "🚨 Flags suspicious URLs and email content in real time",
+            "metaChips": ["Security", "AI", "Python", "API"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "PhishHunter is a real-time phishing detection tool that analyzes URLs and email content to classify malicious threats. It uses heuristic rules and ML-assisted classification to provide instant risk scores for digital security protection."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "Phishing attacks are increasing in volume and sophistication, while existing tools are often complex or inaccessible for non-technical users. A fast, easy-to-use detection system was needed for real-time security analysis."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Built a URL and email parsing pipeline",
+                "Integrated ML-assisted classification",
+                "Designed a REST API for predictions",
+                "Implemented logging for threat analysis",
+                "Created a simple web UI for user interaction"
+            ]
+        },
+        "techStackDetail": [
+            "Python", "FastAPI", "Scikit-Learn", "HTML", "JavaScript"
+        ],
+        "features": [
+            { "title": "Real-time Detection", "icon": "🚨", "desc": "Instant threat flagging" },
+            { "title": "URL Analysis", "icon": "🌐", "desc": "Parses suspicious links" },
+            { "title": "Risk Scoring", "icon": "🧠", "desc": "ML-assisted verdict" },
+            { "title": "Threat Logging", "icon": "📊", "desc": "Tracks attack history" }
+        ],
+        "impact": [
+            "🚀 Processed malicious links in under 1 second",
+            "🔍 Improved phishing detection accuracy",
+            "🏆 Positioned as a flagship cybersecurity project",
+            "📈 Strengthened ML + backend engineering skills"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "Balancing speed and accuracy required model optimization and dataset preprocessing. This project reinforced my expertise in deploying ML models behind REST APIs."
+        }
+    }
+  },
+  {
+    "id": 6,
+    "title": "Portfolio",
+    "shortDescription": "Netflix-Inspired Personal Brand Platform",
+    "description": "A cinematic, immersive personal portfolio website inspired by Netflix's UI. Features dynamic content filtering, pop-out animations, and a 'browse' experience for skills and projects.",
+    "category": "Web Applications",
+    "image": "/netflix_hero_bg.png",
+    "techStack": ["React", "Vite", "CSS3"],
+    "size": "medium",
+    "metadata": "Live Deployed",
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/Portfolio",
+      "demo": "#"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "Netflix-Inspired Personal Branding Platform",
+            "impact": "🎬 Cinematic UX portfolio with dynamic navigation",
+            "metaChips": ["UI/UX", "Frontend", "Branding", "Web"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "This interactive portfolio was designed as a Netflix-style platform to showcase projects, achievements, and skills through immersive storytelling and dynamic UI/UX."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "Traditional portfolios fail to differentiate candidates in a competitive market. There was a need for a creative, memorable, and interactive personal branding platform."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Designed a Netflix-inspired UI system",
+                "Built dynamic navigation & animations",
+                "Implemented responsive layouts",
+                "Added micro-interactions",
+                "Optimized performance"
+            ]
+        },
+        "techStackDetail": [
+            "React", "JavaScript", "CSS", "UI/UX"
+        ],
+        "features": [
+            { "title": "Cinematic UI/UX", "icon": "🎬", "desc": "Immersive experience" },
+            { "title": "Fast Navigation", "icon": "⚡", "desc": "SPA architecture" },
+            { "title": "Mobile Responsive", "icon": "📱", "desc": "Works on all devices" },
+            { "title": "Brand Storytelling", "icon": "🧠", "desc": "Narrative-driven design" }
+        ],
+        "impact": [
+            "🚀 Increased recruiter engagement",
+            "🎯 Strengthened personal brand identity",
+            "🏆 Positioned as flagship branding project",
+            "📈 Improved frontend engineering skills"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "Balancing creativity with performance required careful optimization and UX testing. This project refined my design systems thinking."
+        }
+    }
+  },
+  {
+    "id": 8,
+    "title": "YouTube Music Clone",
+    "shortDescription": "Responsive music streaming interface",
+    "description": "A responsive music streaming interface replicating YouTube Music's core functionality.",
+    "category": "Web Applications",
+    "image": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
+    "techStack": ["React", "Vite", "YouTube Data API", "Tailwind"],
+    "size": "medium",
+    "metadata": "API Integration",
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec/MusicClone",
+      "demo": "#"
+    }
+  },
+  {
+    "id": 5,
+    "title": "CyberQuest (Concept)",
+    "shortDescription": "Gamified cybersecurity learning platform",
+    "description": "Gamified cybersecurity learning platform concept featuring interactive quizzes, XP systems, and leaderboards.",
+    "category": "Web Applications",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "size": "medium",
+    "metadata": "EdTech Concept",
+    "links": {
+      "github": "https://github.com/raghuvanshi-sec",
       "demo": "#"
     }
   },
   {
     "id": 3,
     "title": "My-Git-Info",
+    "shortDescription": "Git config extraction tool",
     "description": "A repository tool for extracting or displaying Git configuration information, useful for development environment setups.",
-    "category": "Dev Tools",
+    "category": "Developer Tools",
     "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=2088&auto=format&fit=crop",
     "techStack": ["Git", "Shell", "Config"],
+    "size": "medium",
+    "metadata": "Utility",
     "links": {
       "github": "https://github.com/raghuvanshi-sec/My-Git-Info",
       "demo": "#"
@@ -38,72 +354,15 @@
   {
     "id": 4,
     "title": "Raghuvanshi-Sec Profile",
+    "shortDescription": "GitHub profile README configuration",
     "description": "The special README repository for the GitHub profile, showcasing professional bio, stats, and pinned projects.",
-    "category": "General",
+    "category": "Featured Projects",
     "image": "https://images.unsplash.com/photo-1655635643532-fa9ba2648cbe?q=80&w=2058&auto=format&fit=crop",
     "techStack": ["Markdown", "GitHub Actions"],
+    "size": "medium",
+    "metadata": "Profile",
     "links": {
       "github": "https://github.com/raghuvanshi-sec/raghuvanshi-sec",
-      "demo": "#"
-    }
-  },
-  {
-    "id": 5,
-    "title": "CyberQuest (Concept)",
-    "description": "Gamified cybersecurity learning platform concept featuring interactive quizzes, XP systems, and leaderboards.",
-    "category": "Web Apps",
-    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-    "techStack": ["React", "Node.js", "MongoDB"],
-    "links": {
-      "github": "https://github.com/raghuvanshi-sec",
-      "demo": "#"
-    }
-  },
-  {
-    "id": 6,
-    "title": "Portfolio",
-    "description": "A cinematic, immersive personal portfolio website inspired by Netflix's UI. Features dynamic content filtering, pop-out animations, and a 'browse' experience for skills and projects.",
-    "category": "Web Apps",
-    "image": "/netflix_hero_bg.png",
-    "techStack": ["React", "Vite", "CSS3", "Generative AI"],
-    "links": {
-      "github": "https://github.com/raghuvanshi-sec/Portfolio",
-      "demo": "#"
-    }
-  },
-  {
-    "id": 7,
-    "title": "Wonderlust",
-    "description": "Full-stack travel listing platform allowing users to discover and book unique stays.",
-    "category": "Web Apps",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop",
-    "techStack": ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
-    "links": {
-      "github": "https://github.com/raghuvanshi-sec/Wonderlust",
-      "demo": "#"
-    }
-  },
-  {
-    "id": 8,
-    "title": "YouTube Music Clone",
-    "description": "A responsive music streaming interface replicating YouTube Music's core functionality.",
-    "category": "Web Apps",
-    "image": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=1974&auto=format&fit=crop",
-    "techStack": ["React", "Vite", "YouTube Data API", "Tailwind"],
-    "links": {
-      "github": "https://github.com/raghuvanshi-sec/MusicClone",
-      "demo": "#"
-    }
-  },
-  {
-    "id": 9,
-    "title": "Hex Inspector",
-    "description": "Advanced web-based binary file analyzer capable of handling large files with virtualization.",
-    "category": "Cybersecurity Tools",
-    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop",
-    "techStack": ["React", "Virtualization", "Web Workers"],
-    "links": {
-      "github": "https://github.com/raghuvanshi-sec/HexInspector",
       "demo": "#"
     }
   }

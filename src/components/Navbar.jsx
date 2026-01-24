@@ -29,6 +29,9 @@ const Navbar = ({ onSearch }) => {
         <Link to="/" className="logo" onClick={handleNavClick}>PORTFOLIO</Link>
         
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <Link to="/intro" className="nav-link" onClick={handleNavClick}>Home</Link>
+          <Link to="/projects" className="nav-link" onClick={handleNavClick}>Projects</Link>
+          <Link to="/contact" className="nav-link" onClick={handleNavClick}>Contact</Link>
           
           <div 
             className={`search-box ${isSearchOpen ? 'active' : ''}`} 
