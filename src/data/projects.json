@@ -323,17 +323,61 @@
   },
   {
     "id": 5,
-    "title": "CyberQuest (Concept)",
-    "shortDescription": "Gamified cybersecurity learning platform",
-    "description": "Gamified cybersecurity learning platform concept featuring interactive quizzes, XP systems, and leaderboards.",
+    "title": "CyberQuest",
+    "shortDescription": "Gamified Cybersecurity Learning Platform",
+    "description": "A comprehensive, gamified cybersecurity learning platform designed to make digital security education engaging and effective. It combines interactive quizzes, real-world scenario-based games, and practical security tools.",
     "category": "Web Applications",
     "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-    "techStack": ["React", "Node.js", "MongoDB"],
+    "techStack": ["Node.js", "Express", "MongoDB", "Auth (JWT/OAuth)"],
     "size": "medium",
-    "metadata": "EdTech Concept",
+    "metadata": "EdTech Platform",
     "links": {
-      "github": "https://github.com/raghuvanshi-sec",
+      "github": "https://github.com/raghuvanshi-sec/cyberquest",
       "demo": "#"
+    },
+    "caseStudy": {
+        "caseHero": {
+            "subtitle": "Gamified Cybersecurity Learning Platform",
+            "impact": "🎮 Makes security education interactive and fun",
+            "metaChips": ["EdTech", "Security", "Full-Stack", "Gamification"]
+        },
+        "overview": {
+            "title": "Project Overview",
+            "text": "CyberQuest is a comprehensive, gamified cybersecurity learning platform designed to make digital security education engaging and effective. It combines interactive quizzes, real-world scenario-based games, and practical security tools into a cohesive experience. Users can track their progress through a dashboard, earn badges for achievements, and compete on leaderboards."
+        },
+        "problem": {
+            "title": "Problem Statement",
+            "text": "Cybersecurity education can often be dry and theoretical. There was a need for a platform that makes learning hands-on and competitive to increase engagement and retention."
+        },
+        "approach": {
+            "title": "Solution & Approach",
+            "points": [
+                "Implemented secure user authentication (JWT & OAuth)",
+                "Designed a gamified progression system with XP and badges",
+                "Built interactive quizzes and security tools",
+                "Created a leaderboard to foster competition",
+                "Ensured responsive design for all devices"
+            ]
+        },
+        "techStackDetail": [
+            "Node.js", "Express", "MongoDB", "Mongoose", "HTML5", "CSS3", "JavaScript"
+        ],
+        "features": [
+            { "title": "Interactive Quizzes", "icon": "📝", "desc": "Test security knowledge" },
+            { "title": "Gamification", "icon": "🏆", "desc": "Earn badges and XP" },
+            { "title": "Leaderboard", "icon": "📊", "desc": "Compete with others" },
+            { "title": "Security Tools", "icon": "🛠️", "desc": "Practical utilities" }
+        ],
+        "impact": [
+            "🎮 Increased user engagement through gamification",
+            "🔐 Provided safe environment for security practice",
+            "👨‍💻 Demonstrated full-stack development skills",
+            "🚀 Scalable architecture for adding new modules"
+        ],
+        "challenges": {
+            "title": "Challenges & Learnings",
+            "text": "Implementing secure authentication and managing user session state across a gamified platform was a key challenge. I learned valuable lessons in JWT implementation and MongoDB schema design for tracking user progress."
+        }
     }
   },
   {
